@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>这是模板<br></h1>
+<h2>首页</h2>
+{{ url_str }} <br>
+{#传参实例#}
+{{my_list}}<br>
+{{my_list[2]}}<br>
+{{my_dictionary.get('B')}}
+<hr>
+{% for i in my_list %}
+    {% if i > 1 %}
+        {{i}}<br>
+    {% endif %} 
+{% endfor %}
+
+<hr>
+{#过滤器#}
+{{url_str | capitalize}} <br>
+{{url_str | upper}} <br>
+{{url_str | upper | reverse }} <br>
+{{my_list | sum }} <br>
+
+</body>
+</html>
